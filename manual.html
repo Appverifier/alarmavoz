@@ -4,127 +4,226 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manual y Soporte - Alarma Voz</title>
+    <title>Manual de Usuario - Alarma Voz</title>
     <style>
         :root {
-            --primary-color: #2196F3;
+            --primary-color: #007AFF;
             --accent-color: #FE518E;
-            --text-color: #333;
-            --bg-color: #f0f2f5;
-            --card-bg: #ffffff;
+            --bg-color: #F5F5F7;
+            --text-color: #1D1D1F;
+            --sub-text: #86868B;
+            --white: #FFFFFF;
         }
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
             background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.5;
             margin: 0;
             padding: 0;
+            -webkit-font-smoothing: antialiased;
         }
 
-        .header {
-            background: linear-gradient(135deg, var(--primary-color), #64b5f6);
-            color: white;
-            padding: 60px 20px;
-            text-align: center;
+        .nav-header {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            position: sticky;
+            top: 0;
+            padding: 15px 0;
+            border-bottom: 1px solid #d2d2d7;
+            z-index: 100;
         }
 
         .container {
             max-width: 900px;
-            margin: -40px auto 40px;
-            padding: 20px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
 
-        .card {
-            background: var(--card-bg);
-            border-radius: 20px;
-            padding: 40px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-            margin-bottom: 30px;
+        .back-link {
+            text-decoration: none;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            font-size: 17px;
+        }
+
+        header {
+            padding: 100px 0 60px;
+            text-align: center;
         }
 
         h1 {
+            font-size: 56px;
+            font-weight: 700;
+            letter-spacing: -0.005em;
             margin: 0;
-            font-size: 3rem;
-            font-weight: 800;
+        }
+
+        .hero-text {
+            font-size: 24px;
+            color: var(--sub-text);
+            margin-top: 20px;
+        }
+
+        .card {
+            background: var(--white);
+            border-radius: 24px;
+            padding: 50px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            margin-bottom: 40px;
         }
 
         h2 {
-            color: var(--primary-color);
-            border-bottom: 2px solid #eee;
-            padding-bottom: 10px;
+            font-size: 32px;
+            font-weight: 600;
+            margin-bottom: 30px;
+            letter-spacing: 0.007em;
+        }
+
+        h3 {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .step-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
             margin-top: 40px;
         }
 
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 30px;
+        .step {
+            text-align: left;
+            padding: 30px;
+            background: #F9F9FB;
+            border-radius: 20px;
         }
 
-        .feature-card {
-            padding: 20px;
-            border: 1px solid #eee;
-            border-radius: 15px;
-            transition: transform 0.3s;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--primary-color);
-        }
-
-        .nav-back {
-            display: inline-block;
-            margin-bottom: 20px;
+        .step-num {
+            width: 40px;
+            height: 40px;
+            background: var(--primary-color);
             color: white;
-            text-decoration: none;
-            font-weight: bold;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .feature-box {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 1px solid #E5E5E7;
+            border-radius: 16px;
+        }
+
+        .icon-box {
+            font-size: 32px;
         }
 
         footer {
+            padding: 80px 0;
             text-align: center;
-            color: #888;
-            padding: 40px;
-            font-size: 0.9rem;
+            color: var(--sub-text);
+            font-size: 14px;
         }
     </style>
 </head>
 
 <body>
-    <div class="header">
-        <a href="index.html" class="nav-back">← Volver al inicio</a>
-        <h1>Manual de Usuario</h1>
-        <p>Aprende a usar Alarma Voz como un experto</p>
-    </div>
+    <nav class="nav-header">
+        <div class="container">
+            <a href="index.html" class="back-link">‹ Volver</a>
+        </div>
+    </nav>
 
-    <div class="container">
-        <div class="card">
-            <h2>🚀 Guía de Inicio Rápido</h2>
-            <div class="grid">
-                <div class="feature-card">
-                    <h3>1. Crea tu Alarma</h3>
-                    <p>Pulsa el botón <strong>+</strong> en la pantalla principal. Selecciona la hora y los días.</p>
+    <header class="container">
+        <h1>Manual de Usuario</h1>
+        <p class="hero-text">Domina cada despertar con Alarma Voz.</p>
+    </header>
+
+    <main class="container">
+        <section class="card">
+            <h2>⏱ Primeros pasos</h2>
+            <p>Configurar tu primera alarma es rápido y sencillo. Solo tienes que seguir estos pasos:</p>
+
+            <div class="step-grid">
+                <div class="step">
+                    <div class="step-num">1</div>
+                    <h3>Crea la alarma</h3>
+                    <p>Pulsa el icono <strong>+</strong> en la pantalla principal. Se abrirá el editor de alarmas.</p>
                 </div>
-                <div class="feature-card">
-                    <h3>2. Escribe el Mensaje</h3>
-                    <p>Escribe lo que quieres escuchar cuando suene la alarma.</p>
+                <div class="step">
+                    <div class="step-num">2</div>
+                    <h3>Escribe tu mensaje</h3>
+                    <p>En el campo "Mensaje de Voz", escribe lo que la app te dirá al despertar. ¡Sé creativo!</p>
                 </div>
-                <div class="feature-card">
-                    <h3>3. Elige la Voz</h3>
-                    <p>Usa voces nativas o <strong>Voz Avanzada</strong> para mejor calidad.</p>
+                <div class="step">
+                    <div class="step-num">3</div>
+                    <h3>Configura el sonido</h3>
+                    <p>Selecciona entre Voz Nativa o Voz Avanzada y elige tu tono favorito.</p>
                 </div>
             </div>
+        </section>
 
-            <h2>🎨 Personalización</h2>
-            <p>Puedes cambiar fondos, elegir colores y ajustar la velocidad de la voz desde los ajustes.</p>
-        </div>
-    </div>
+        <section class="card">
+            <h2>🎙 Servicios de Voz</h2>
+            <div class="feature-box">
+                <div class="icon-box">📱</div>
+                <div>
+                    <h3>Voz Nativa</h3>
+                    <p>Utiliza las voces integradas de iOS. Funciona sin conexión a internet y es totalmente gratuita.
+                    </p>
+                </div>
+            </div>
+            <div class="feature-box">
+                <div class="icon-box">🌟</div>
+                <div>
+                    <h3>Voz Avanzada</h3>
+                    <p>Utiliza tecnología de Google Cloud. Ofrece voces humanas e inteligentes con una entonación
+                        natural sorprendente.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>🖼 Personalización Visual</h2>
+            <p>A diferencia de las alarmas estándar, Alarma Voz te permite crear una atmósfera única para cada alarma:
+            </p>
+            <ul>
+                <li><strong>Fondos Dedicados:</strong> Puedes asignar una foto diferente para cada alarma. Ideal para
+                    poner fotos de tus metas, de tu familia o paisajes relajantes.</li>
+                <li><strong>Colores de Tarjeta:</strong> Identifica tus alarmas de trabajo, ejercicio o descanso
+                    mediante colores vibrantes en la pantalla principal.</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h2>💡 Consejos de Uso</h2>
+            <p>Para asegurar que tus alarmas suenen siempre correctamente:</p>
+            <ul>
+                <li><strong>Volumen:</strong> Asegúrate de que el volumen de tu dispositivo esté a un nivel adecuado.
+                </li>
+                <li><strong>Modo Silencio:</strong> Alarma Voz respetará tus configuraciones de sistema. Mantén las
+                    notificaciones permitidas para un funcionamiento óptimo.</li>
+                <li><strong>Batería:</strong> Te recomendamos cargar el dispositivo durante la noche para evitar que se
+                    apague antes de la hora configurada.</li>
+            </ul>
+        </section>
+    </main>
 
     <footer>
-        &copy; 2024 Alarma Voz
+        <div class="container">
+            Copyright &copy; 2024 Alarma Voz. Hecho para madrugar con una sonrisa.
+        </div>
     </footer>
 </body>
 
