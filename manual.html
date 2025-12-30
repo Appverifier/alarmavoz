@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual y Soporte - Alarma Voz</title>
+    <style>
+        :root {
+            --primary-color: #2196F3;
+            --accent-color: #FE518E;
+            --text-color: #333;
+            --bg-color: #f0f2f5;
+            --card-bg: #ffffff;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--primary-color), #64b5f6);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: -40px auto 40px;
+            padding: 20px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 3rem;
+            font-weight: 800;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-top: 40px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .feature-card {
+            padding: 20px;
+            border: 1px solid #eee;
+            border-radius: 15px;
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary-color);
+        }
+
+        .nav-back {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            color: #888;
+            padding: 40px;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <a href="index.html" class="nav-back">← Volver al inicio</a>
+        <h1>Manual de Usuario</h1>
+        <p>Aprende a usar Alarma Voz como un experto</p>
+    </div>
+
+    <div class="container">
+        <div class="card">
+            <h2>🚀 Guía de Inicio Rápido</h2>
+            <div class="grid">
+                <div class="feature-card">
+                    <h3>1. Crea tu Alarma</h3>
+                    <p>Pulsa el botón <strong>+</strong> en la pantalla principal. Selecciona la hora y los días.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>2. Escribe el Mensaje</h3>
+                    <p>Escribe lo que quieres escuchar cuando suene la alarma.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>3. Elige la Voz</h3>
+                    <p>Usa voces nativas o <strong>Voz Avanzada</strong> para mejor calidad.</p>
+                </div>
+            </div>
+
+            <h2>🎨 Personalización</h2>
+            <p>Puedes cambiar fondos, elegir colores y ajustar la velocidad de la voz desde los ajustes.</p>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2024 Alarma Voz
+    </footer>
+</body>
+
+</html>
