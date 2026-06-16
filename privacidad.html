@@ -109,6 +109,10 @@
             color: #424245;
         }
 
+        a {
+            color: var(--primary-color);
+        }
+
         .privacy-highlight {
             background-color: var(--secondary-bg);
             padding: 30px;
@@ -135,78 +139,89 @@
     <header class="container">
         <img src="icon.png" alt="Icon" class="header-icon">
         <h1>Privacidad</h1>
-        <p class="last-updated">Actualizada el 30 de diciembre de 2024</p>
+        <p class="last-updated">Actualizada el 16 de junio de 2026</p>
     </header>
 
     <main class="container">
         <div class="privacy-highlight">
-            <p><strong>Privacidad por diseño.</strong> En Alarma Voz, creemos que la privacidad es un derecho
-                fundamental. Nuestra aplicación está diseñada para que tus datos personales, tus grabaciones de voz y
-                tus imágenes nunca salgan de tu control.</p>
+            <p><strong>Privacidad por diseño.</strong> Alarma Voz funciona íntegramente en tu dispositivo.
+                No recopilamos tus datos personales, no usamos servidores propios y no enviamos tu información a
+                terceros. Tus mensajes, imágenes y ajustes nunca salen de tu iPhone.</p>
         </div>
 
         <section>
-            <h2>1. Información que recopilamos</h2>
-            <p>Alarma Voz está diseñada para minimizar la recopilación de datos al máximo. La mayor parte de la
-                información se procesa y almacena localmente en su dispositivo.</p>
+            <h2>1. Información que tratamos</h2>
+            <p>Alarma Voz está diseñada para no recopilar datos. Toda la información se procesa y almacena localmente en
+                tu dispositivo.</p>
 
-            <h3>1.1 Datos de Texto y Voz</h3>
-            <p>Para la funcionalidad de alarmas habladas, procesamos el texto que usted introduce:</p>
+            <h3>1.1 Texto y voz</h3>
             <ul>
-                <li><strong>Voz Nativa:</strong> El procesamiento se realiza íntegramente en el dispositivo utilizando
-                    las librerías de síntesis de voz de iOS.</li>
-                <li><strong>Voz Avanzada:</strong> El texto se envía de forma encriptada a través de Firebase a los
-                    servicios de Google Cloud Text-to-Speech únicamente para generar el archivo de audio. Este texto no
-                    se almacena en caché ni se utiliza para entrenar modelos de IA externos.</li>
+                <li><strong>Mensajes de voz:</strong> la conversión de texto a voz se realiza íntegramente en el
+                    dispositivo con las voces del sistema de iOS. No se envía a ningún servidor.</li>
+                <li><strong>Dictado (micrófono):</strong> si dictas un mensaje, el micrófono y el reconocimiento de voz
+                    se usan solo para transcribir tu texto. El procesamiento es del sistema operativo y en el
+                    dispositivo; no almacenamos ni enviamos audio ni transcripciones.</li>
             </ul>
 
-            <h3>1.2 Imágenes y Contenido Multimedia</h3>
-            <p>Cuando seleccionas una imagen para el fondo de una alarma o temporizador, la aplicación almacena una
-                copia local en su base de datos privada dentro del dispositivo. **Nunca subimos tus fotos personales a
-                nuestros servidores.**</p>
+            <h3>1.2 Imágenes y contenido</h3>
+            <p>Cuando eliges una imagen de fondo para una alarma o temporizador, se guarda una copia local dentro del
+                almacenamiento privado de la app en tu dispositivo. Nunca subimos tus fotos a ningún servidor.</p>
         </section>
 
         <section>
             <h2>2. Cómo protegemos tus datos</h2>
-            <p>Utilizamos las tecnologías más avanzadas de Apple para asegurar tu información:</p>
             <ul>
-                <li><strong>Almacenamiento Local Seguro:</strong> Utilizamos Core Data con encriptación a nivel de
-                    archivo nativa de iOS.</li>
-                <li><strong>Sin Rastreadores:</strong> Nuestra aplicación NO contiene SDKs de marketing, ni Facebook
-                    Pixel, ni herramientas de rastreo de comportamiento de terceros.</li>
-                <li><strong>Comunicación Encriptada:</strong> Todas las llamadas a los servicios de voz utilizan
-                    protocolos HTTPS con encriptación TLS 1.3 de extremo a extremo.</li>
+                <li><strong>Todo en el dispositivo:</strong> tus alarmas, temporizadores, mensajes e imágenes se guardan
+                    localmente (Core Data) con la protección de archivos nativa de iOS.</li>
+                <li><strong>Sin servidores propios:</strong> la app no se comunica con servidores nuestros ni de
+                    terceros para su funcionamiento.</li>
+                <li><strong>Sin rastreadores:</strong> no incluimos SDKs de marketing ni herramientas de rastreo de
+                    comportamiento.</li>
             </ul>
         </section>
 
         <section>
-            <h2>3. Gestión de Suscripciones</h2>
-            <p>Las transacciones financieras se realizan exclusivamente a través de la infraestructura de Apple (App
-                Store). Alarma Voz no tiene acceso a sus datos bancarios ni de tarjeta de crédito. Apple solo nos
-                informa sobre la validez de su suscripción mediante un identificador anónimo.</p>
+            <h2>3. Suscripciones</h2>
+            <p>Las transacciones se realizan exclusivamente a través de Apple (App Store). Alarma Voz no tiene acceso a
+                tus datos bancarios ni de tarjeta. Apple solo nos informa de la validez de tu suscripción.</p>
         </section>
 
         <section>
-            <h2>4. Tus Derechos (GDPR/CCPA)</h2>
-            <p>Como usuario, tienes control total sobre tus datos:</p>
+            <h2>4. La App Store y Apple</h2>
+            <p>Aunque Alarma Voz no recopila datos personales, Apple, como proveedor de la App Store, puede recoger su
+                propia información (por ejemplo, datos de la compra de la suscripción o estadísticas y diagnósticos de
+                uso estándar de la plataforma) conforme a la
+                <a href="https://www.apple.com/legal/privacy/">Política de Privacidad de Apple</a>. Dicho tratamiento es
+                responsabilidad de Apple y queda fuera de nuestro control.</p>
+        </section>
+
+        <section>
+            <h2>5. Tus derechos (RGPD/CCPA)</h2>
             <ul>
-                <li><strong>Acceso y Borrado:</strong> Puedes ver y eliminar cualquier alarma, temporizador o imagen
-                    simplemente borrándola dentro de la app o desinstalando la aplicación.</li>
-                <li><strong>Permisos:</strong> Puedes revocar el acceso a Fotos o Notificaciones en cualquier momento
-                    desde los Ajustes de iOS.</li>
+                <li><strong>Acceso y borrado:</strong> puedes ver y eliminar cualquier alarma, temporizador o imagen
+                    dentro de la app, o desinstalando la aplicación.</li>
+                <li><strong>Permisos:</strong> puedes revocar el acceso a Fotos, Micrófono, Reconocimiento de voz o
+                    Alarmas/Notificaciones en cualquier momento desde los Ajustes de iOS.</li>
             </ul>
         </section>
 
         <section>
-            <h2>5. Contacto</h2>
-            <p>Para cualquier duda técnica o consulta sobre privacidad, puedes contactarnos a través de la sección de
-                soporte en la App Store.</p>
+            <h2>6. Cambios en esta política</h2>
+            <p>Podemos actualizar esta Política de Privacidad para reflejar mejoras de la app o cambios legales. Cualquier
+                modificación se publicará en esta misma página, indicando la fecha de actualización en la parte superior.
+                Te recomendamos revisarla periódicamente.</p>
+        </section>
+
+        <section>
+            <h2>7. Contacto</h2>
+            <p>Para cualquier consulta sobre privacidad, escríbenos a
+                <a href="mailto:rogeriocsan@gmail.com">rogeriocsan@gmail.com</a>.</p>
         </section>
     </main>
 
     <footer>
         <div class="container">
-            Copyright &copy; 2024 Alarma Voz. Todos los derechos reservados.
+            Copyright &copy; 2026 Alarma Voz. Todos los derechos reservados.
         </div>
     </footer>
 </body>
